@@ -28,6 +28,7 @@ def get_answer(question):
 		for divisor in divisors:
 			if num % divisor == 0:
 				current_answer.append(rules[divisor])
+
 		if current_answer:
 			answer.append(''.join(current_answer))
 		else:
@@ -66,6 +67,7 @@ def main():
 	print("Starting...")
 	question_url = start_interview()['nextQuestion']
 	print(f'Initial question URL is: {question_url}')
+
 	while question_url:
 		question_url = solve_question(question_url)
 
