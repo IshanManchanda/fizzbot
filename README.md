@@ -2,4 +2,5 @@
 
 # Fizzbot
 
-Solution for Fizzbot, noops challenge 2019, written in Python. Uses the requests library.
+Solution for Fizzbot (of the noops challenge 2019), written in Python 3.
+Uses the requests library.
