@@ -42,15 +42,12 @@ def solve_question(question_url):
 
 	question = requests.get(api + question_url).json()
 
-	if question.get('nextQuestion'):
-		return question.get('nextQuestion')
-
 	answer = get_answer(question)
 	print(f'Solution is: {answer}')
 
 	response = try_answer(question_url, answer)
 	if response['result'] == 'interview complete':
-		print(response)
+		print(json.dumps(response, indent=4))
 		exit(0)
 
 	elif response['result'] != 'correct':
